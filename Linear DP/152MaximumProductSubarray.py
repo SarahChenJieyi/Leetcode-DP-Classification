@@ -6,7 +6,9 @@ class Solution(object):
         """
         if not nums:
             return 0
-
+        
+        # when product negative num, the minimum product may become the maximum
+        # two dp lists to store max/min product end with current element
         dp_max = list(nums)
         dp_min = list(nums)
         for i in range(1, len(nums)):
